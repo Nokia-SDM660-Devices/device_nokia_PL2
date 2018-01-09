@@ -48,3 +48,6 @@ ro.vendor.ril.svdo                      u:object_r:vendor_radio_prop:s0
 
 # Fast Charge
 persist.vendor.fastchg_enabled          u:object_r:vendor_fastcharge_prop:s0
+
+# Power
+vendor.powerhal.state                   u:object_r:power_prop:s0
