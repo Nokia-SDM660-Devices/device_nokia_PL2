@@ -51,4 +51,5 @@ persist.vendor.fastchg_enabled          u:object_r:vendor_fastcharge_prop:s0
 
 # Power
 vendor.powerhal.audio                   u:object_r:power_prop:s0
+vendor.powerhal.init                    u:object_r:power_prop:s0
 vendor.powerhal.state                   u:object_r:power_prop:s0
