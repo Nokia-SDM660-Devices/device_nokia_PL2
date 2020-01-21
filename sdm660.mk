@@ -352,6 +352,9 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.perf@2.0.vendor \
     android.hardware.power.stats@1.0-service.mock
 
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+
 # Protobuf
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-vendorcompat \
