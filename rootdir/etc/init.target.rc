@@ -27,6 +27,28 @@
 #
 #
 
+on boot
+    # Setup permission for Power HAL
+    chown system system /dev/stune/top-app/schedtune.boost
+    chown system system /sys/class/kgsl/kgsl-3d0/devfreq/min_freq
+    chown system system /sys/class/kgsl/kgsl-3d0/devfreq/max_freq
+    chown system system /sys/class/kgsl/kgsl-3d0/force_rail_on
+    chown system system /sys/class/kgsl/kgsl-3d0/force_clk_on
+    chown system system /sys/class/kgsl/kgsl-3d0/idle_timer
+    chown system system /sys/class/devfreq/soc:qcom,cpubw/min_freq
+    chown system system /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/hyst_trigger_count
+    chown system system /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/hist_memory
+
+    chmod 0664 /dev/stune/top-app/schedtune.boost
+    chmod 0664 /sys/class/kgsl/kgsl-3d0/devfreq/min_freq
+    chmod 0664 /sys/class/kgsl/kgsl-3d0/devfreq/max_freq
+    chmod 0664 /sys/class/kgsl/kgsl-3d0/force_rail_on
+    chmod 0664 /sys/class/kgsl/kgsl-3d0/force_clk_on
+    chmod 0664 /sys/class/kgsl/kgsl-3d0/idle_timer
+    chmod 0664 /sys/class/devfreq/soc:qcom,cpubw/min_freq
+    chmod 0664 /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/hyst_trigger_count
+    chmod 0664 /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/hist_memory
+
 
 on boot
    # Gestures
@@ -46,6 +68,10 @@ on boot
 on post-fs-data
    # Gestures
    mkdir /data/vendor/misc/touch 0770 system system
+   
+   chmod 0664 /sys/touchpanel/capacitive_keys
+   chmod 0664 /sys/touchpanel/double_tap
+   chmod 0664 /sys/touchpanel/reversed_keys
 
 service vendor.qseecomd /vendor/bin/qseecomd
    class core
@@ -166,5 +192,4 @@ service vendor.hvdcp_opti /system/vendor/bin/hvdcp_opti
      class main
      user root
      group system wakelock
-
 
