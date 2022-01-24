@@ -361,7 +361,8 @@ PRODUCT_COPY_FILES += \
 # QTI Components
 TARGET_COMMON_QTI_COMPONENTS := \
     init \
-    telephony
+    telephony \
+    usb
 
 # Radio
 PRODUCT_PACKAGES += \
