@@ -362,7 +362,8 @@ PRODUCT_COPY_FILES += \
 TARGET_COMMON_QTI_COMPONENTS := \
     init \
     telephony \
-    usb
+    usb \
+    vibrator
 
 # Radio
 PRODUCT_PACKAGES += \
@@ -453,11 +454,6 @@ PRODUCT_PACKAGES_DEBUG += \
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service
-
-# Vibrator
-PRODUCT_PACKAGES += \
-    android.hardware.vibrator@1.0-impl \
-    android.hardware.vibrator@1.0-service
 
 # Weaver
 PRODUCT_PACKAGES += \
