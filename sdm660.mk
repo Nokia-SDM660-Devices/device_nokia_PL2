@@ -462,11 +462,7 @@ PRODUCT_PACKAGES += \
 # Wi-Fi
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
-    libcld80211 \
-    hostapd \
-    WifiOverlay \
-    wpa_supplicant \
-    wpa_supplicant.conf
+    libcld80211
 
 # Fast Charge HAL
 PRODUCT_PACKAGES += \
