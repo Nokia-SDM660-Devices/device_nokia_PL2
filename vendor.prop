@@ -97,6 +97,9 @@ ro.bt.bdaddr_path=/proc/bt_mac
 ro.vendor.bluetooth.wipower=false
 vendor.qcom.bluetooth.soc=cherokee
 
+# Bluetooth
+bluetooth.device.default_name=Nokia 6.1
+
 # Camera
 persist.camera.ffcolor=true
 persist.capture.burst.exposures=0,-9,9
