@@ -1,6 +1,9 @@
 # NFC
 type sec_device, dev_type;
 
+# DebugFS
+type debugfs_wlan, fs_type, debugfs_type;
+
 # FIH Partitions
 type fih_partition, dev_type;
 
