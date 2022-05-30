@@ -67,9 +67,6 @@ USE_CAMERA_STUB := true
 # Display
 TARGET_SCREEN_DENSITY := 420
 
-# DRM
-TARGET_ENABLE_MEDIADRM_64 := true
-
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
