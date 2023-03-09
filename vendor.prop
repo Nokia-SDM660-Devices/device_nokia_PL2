@@ -205,6 +205,12 @@ ro.vendor.sensors.facing=false
 ro.soc.manufacturer=Qualcomm
 ro.soc.model=SDM660
 
+# Spatial Audio
+ro.audio.spatializer_enabled=true
+ro.audio.headtracking_enabled=true
+ro.audio.spatializer_transaural_enabled_default=false
+persist.vendor.audio.spatializer.speaker_enabled=true
+
 # Stagefright
 debug.stagefright.omx_default_rank.sw-audio=1
 debug.stagefright.omx_default_rank=0
