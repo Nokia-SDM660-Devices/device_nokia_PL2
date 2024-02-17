@@ -135,6 +135,7 @@ dalvik.vm.dex2oat64.enabled=true
 
 # Display
 debug.renderengine.backend=skiaglthreaded
+vendor.display.disable_rotator_downscale=1
 vendor.display.disable_scaler=1
 renderthread.skia.reduceopstasksplitting=true
 debug.sf.late.sf.duration=30000000
