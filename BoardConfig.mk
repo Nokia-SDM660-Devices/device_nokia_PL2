@@ -90,7 +90,7 @@ BOARD_KERNEL_CMDLINE := \
     console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 earlycon=msm_serial_dm,0xc170000 androidboot.hardware=qcom \
     msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 sched_enable_hmp=1 sched_enable_power_aware=1 \
     service_locator.enable=1 swiotlb=1 androidboot.configfs=true androidboot.usbcontroller=a800000.dwc3 \
-    loop.max_part=7 androidboot.boot_devices=soc/c0c4000.sdhci
+    loop.max_part=7 androidboot.boot_devices=soc/c0c4000.sdhci androidboot.super_partition=system
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_CONFIG := nokia_defconfig
 BOARD_KERNEL_PAGESIZE := 4096
@@ -109,13 +109,22 @@ TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # Partitions
 BOARD_USES_SYSTEM_OTHER_ODEX := true
+BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3221225472
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 2147483648
-BOARD_VENDORIMAGE_PARTITION_SIZE := 1073741824
 BOARD_FLASH_BLOCK_SIZE := 262144
+
+# Partition: Retrofit Dynamic Partition
+BOARD_SUPER_PARTITION_BLOCK_DEVICES := system vendor
+BOARD_SUPER_PARTITION_METADATA_DEVICE := system
+BOARD_SUPER_PARTITION_SYSTEM_DEVICE_SIZE := 3221225472
+BOARD_SUPER_PARTITION_VENDOR_DEVICE_SIZE := 1073741824
+BOARD_SUPER_PARTITION_SIZE := $(shell expr $(BOARD_SUPER_PARTITION_VENDOR_DEVICE_SIZE) + $(BOARD_SUPER_PARTITION_SYSTEM_DEVICE_SIZE) )
+BOARD_SUPER_PARTITION_GROUPS := nokia_sdm660_dynamic
+BOARD_NOKIA_SDM660_DYNAMIC_SIZE := $(shell expr $(BOARD_SUPER_PARTITION_SIZE) - 4194304 )
+BOARD_NOKIA_SDM660_DYNAMIC_PARTITION_LIST := system vendor
 
 TARGET_COPY_OUT_PRODUCT := system/product
 TARGET_COPY_OUT_VENDOR := vendor
