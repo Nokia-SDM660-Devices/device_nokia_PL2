@@ -1,3 +1,7 @@
+# NFC
+/dev/sec-nfc              u:object_r:sec_device:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.nfc@1\.2-service\.samsung       u:object_r:hal_nfc_default_exec:s0
+
 # Cutback
 /data/vendor/misc/cutback(/.*)?     u:object_r:cutback_data_file:s0
 /dev/socket/cutback                 u:object_r:cutback_socket:s0
