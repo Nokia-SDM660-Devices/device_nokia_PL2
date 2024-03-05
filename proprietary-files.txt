@@ -1216,6 +1216,19 @@ vendor/firmware/widevine.b06
 vendor/firmware/widevine.b07
 vendor/firmware/widevine.mdt
 
-# WiFi - from A1N_sprout - 00WW_FIH-user 10 QKQ1.190828.002 00WW_5_120 release-keys
-vendor/bin/cnss-daemon|ed59715558ace0fa5c724de514d45017539fcd12
-vendor/bin/cnss_diag|c89246db0915c90785004de7451ca3a32de0d9ee
+# Wi-Fi configs
+vendor/bin/cnss-daemon
+vendor/bin/cnss_diag
+vendor/etc/wifi/bdf/bdwlan_B2N_cal.bin
+vendor/etc/wifi/bdf/bdwlan_C1N_cal.bin
+vendor/etc/wifi/bdf/bdwlan_CTL_cal.bin
+vendor/etc/wifi/bdf/bdwlan_HG1_cal.bin
+vendor/etc/wifi/bdf/bdwlan_P2I_cal.bin
+vendor/etc/wifi/bdf/bdwlan_PL2_cal.bin
+vendor/etc/wifi/bdf/bdwlan_SAT_cal.bin
+vendor/etc/wifi/bdf/bdwlan_SD1_cal.bin
+vendor/etc/wifi/bdf/bdwlan_SS2_cal.bin
+vendor/etc/wifi/bdf/bdwlan_TAS_cal.bin
+vendor/etc/wifi/bdf/bdwlan_def.bin
+vendor/etc/wifi/aoa_cldb_falcon.bin
+vendor/etc/wifi/aoa_cldb_swl14.bin
