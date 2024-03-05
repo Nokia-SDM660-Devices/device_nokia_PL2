@@ -999,6 +999,9 @@ service vendor.qcom-post-boot /vendor/bin/init.qcom.post_boot.sh
 on property:sys.boot_completed=1
     start vendor.qcom-post-boot
 
+# Enable PowerHAL hint processing
+    setprop vendor.powerhal.init 1
+
 on property:ro.vendor.ril.mbn_copy_completed=1
     write /data/vendor/radio/copy_complete 1
 
@@ -1288,6 +1291,3 @@ service vendor.sensors-hal-1-0 /vendor/bin/hw/android.hardware.sensors@1.0-servi
     group system input uhid wakelock
     capabilities BLOCK_SUSPEND
     rlimit rtprio 10 10
-
-    # Enable PowerHAL hint processing
-    setprop vendor.powerhal.init 1
