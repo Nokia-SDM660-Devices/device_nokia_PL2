@@ -349,7 +349,8 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.perf@2.0.vendor
+    vendor.qti.hardware.perf@2.0.vendor \
+    android.hardware.power.stats@1.0-service.mock
 
 # Protobuf
 PRODUCT_PACKAGES += \
