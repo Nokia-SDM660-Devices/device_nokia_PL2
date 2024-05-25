@@ -154,6 +154,7 @@ BOARD_ROOT_EXTRA_SYMLINKS := \
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 
 # Sepolicy
+include device/lineage/sepolicy/libperfmgr/sepolicy.mk
 include device/qcom/sepolicy-legacy-um/SEPolicy.mk
 SELINUX_IGNORE_NEVERALLOWS := true
 PRODUCT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
