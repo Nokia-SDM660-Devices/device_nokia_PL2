@@ -206,7 +206,8 @@ PRODUCT_PACKAGES += \
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0.vendor
+    android.hardware.gatekeeper@1.0.vendor \
+    libion.vendor
 
 # FM
 PRODUCT_PACKAGES += \
@@ -299,6 +300,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.system.net.netd@1.0 \
     android.system.net.netd@1.1.vendor \
+    libnetutils.vendor \
     netutils-wrapper-1.0
 
 # NFC
@@ -373,6 +375,10 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.config@1.2.vendor \
     android.hardware.radio.deprecated@1.0.vendor \
     librmnetctl \
+    libsqlite.vendor \
+    libsysutils.vendor \
+    libsqlite.vendor \
+    libsysutils.vendor \
     libxml2
 
 # Ramdisk
