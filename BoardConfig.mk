@@ -72,9 +72,6 @@ USE_CAMERA_STUB := true
 # Display
 TARGET_SCREEN_DENSITY := 440
 
-# Filesystem
-TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
-
 # Display
 TARGET_USES_GRALLOC1 := true
 TARGET_USES_HWC2 := true
@@ -131,10 +128,6 @@ TARGET_COPY_OUT_VENDOR := vendor
 
 TARGET_USERIMAGES_USE_EXT4 := true
 
-# Platform
-BOARD_USES_QCOM_HARDWARE := true
-TARGET_BOARD_PLATFORM := sdm660
-
 # Power
 TARGET_USES_INTERACTION_BOOST := true
 TARGET_TAP_TO_WAKE_NODE := "/proc/AllHWList/tp_double_tap"
@@ -163,8 +156,6 @@ BOARD_ROOT_EXTRA_SYMLINKS := \
 SELINUX_IGNORE_NEVERALLOWS := true
 
 # Sepolicy
-include device/qcom/sepolicy-legacy-um/SEPolicy.mk
-
 PRODUCT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 

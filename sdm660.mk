@@ -247,10 +247,6 @@ PRODUCT_PACKAGES += \
 
 # HIDL
 PRODUCT_PACKAGES += \
-    android.hidl.base@1.0 \
-    android.hidl.base@1.0.vendor \
-    android.hidl.manager@1.0 \
-    android.hidl.manager@1.0.vendor \
     libhidltransport \
     libhidltransport.vendor \
     libhwbinder \
@@ -339,6 +335,9 @@ PRODUCT_PACKAGES += \
 # Perf
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/perf-profile0.conf:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perf-profile0.conf
+
+# Platform
+TARGET_BOARD_PLATFORM := sdm660
 
 # Power
 PRODUCT_PACKAGES += \
@@ -438,19 +437,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
        ro.audio.spatializer_transaural_enabled_default=false \
        persist.vendor.audio.spatializer.speaker_enabled=true
 
-# Telephony-ext
-PRODUCT_PACKAGES += \
-    ims-ext-common \
-    ims_ext_common.xml \
-    qti-telephony-hidl-wrapper \
-    qti_telephony_hidl_wrapper.xml \
-    qti-telephony-utils \
-    qti_telephony_utils.xml \
-    telephony-ext
-
-PRODUCT_BOOT_JARS += \
-    telephony-ext
-
 # Update engine
 PRODUCT_PACKAGES += \
     update_engine \
@@ -477,7 +463,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
     libcld80211 \
-    libwpa_client \
     hostapd \
     WifiOverlay \
     wpa_supplicant \
