@@ -160,8 +160,8 @@ PRODUCT_PACKAGES += \
     libgui_shim \
     libgui_shim_vendor
 
-PRODUCT_PACKAGES += \
-    Camera
+# Camera (Google Camera)
+$(call inherit-product, vendor/GoogleCamera/setup.mk)
 
 # Cgroup and task_profiles
 PRODUCT_COPY_FILES += \
@@ -419,7 +419,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o.mk)
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH) \
-    vendor/nokia/Camera \
     hardware/samsung
 
 # Spatial Audio
