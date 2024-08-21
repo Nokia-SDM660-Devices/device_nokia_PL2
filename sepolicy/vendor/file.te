@@ -1,6 +1,9 @@
 # FIH Partitions
 type fih_partition, dev_type;
 
+# NFC
+type sec_device, dev_type;
+
 # /dev/elanfp
 type sysfs_fingerprint, sysfs_type, fs_type;
 

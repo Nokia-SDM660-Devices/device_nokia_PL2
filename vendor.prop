@@ -5,6 +5,7 @@ audio.offload.min.duration.secs=30
 audio.offload.video=true
 audio.sys.noisy.broadcast.delay=600
 audio.sys.offload.pstimeout.secs=3
+persist.audio.fluence.voicecomm=true
 persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
 persist.bluetooth.a2dp_offload.disabled=true
 persist.vendor.audio.fluence.speaker=true
@@ -99,6 +100,8 @@ ro.vendor.bluetooth.wipower=false
 vendor.qcom.bluetooth.soc=cherokee
 
 # Camera
+persist.camera.ffcolor=true
+persist.capture.burst.exposures=0,-9,9
 camera.aux.packagelist=net.sourceforge.opencamera,org.codeaurora.snapcam,com.fihtdc.fqc
 camera.disable_zsl_mode=1
 camera.panorama.quality=middle
@@ -125,6 +128,9 @@ drm.service.enabled=true
 ro.com.widevine.cachesize=16777216
 persist.gsmapp.ezincall.video=false
 persist.sys.screenmode=1
+
+# Fingerprint
+ro.hardware.fingerprint=elan
 
 # FM
 vendor.hw.fm.init=0
@@ -163,6 +169,7 @@ persist.vendor.radio.procedure_bytes=SKIP
 persist.vendor.radio.rat_on=combine
 persist.vendor.radio.sib16_support=1
 rild.libpath=/system/vendor/lib64/libril-qc-qmi-1.so
+ro.rf.power.reduction.for.mcc=1
 ro.carrier=unknown
 ro.com.android.dataroaming=true
 ro.telephony.iwlan_operation_mode=legacy
