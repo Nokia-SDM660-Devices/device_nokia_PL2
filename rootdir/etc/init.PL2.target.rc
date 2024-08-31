@@ -42,6 +42,8 @@ on property:sys.boot_completed=1
     exec u:r:vendor_init:s0 -- /vendor/bin/toybox_vendor find /data/system/users -type d \
          -exec /vendor/bin/toybox_vendor setfattr -x security.sehash {} \;
     restorecon_recursive /data/system/users/
+    # Stop bootanimation
+    stop bootanim
 
 on property:ro.boot.simslot=1
     setprop persist.radio.multisim.config ss
