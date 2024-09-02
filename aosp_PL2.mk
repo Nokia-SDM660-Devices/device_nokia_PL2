@@ -43,6 +43,8 @@ PRODUCT_MODEL := Nokia 6.1
 
 PRODUCT_GMS_CLIENTID_BASE := android-hmd
 
+-include vendor/lineage-priv/keys/keys.mk
+
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_DEVICE=PL2_sprout \
     PRODUCT_NAME=Plate2_00WW \
