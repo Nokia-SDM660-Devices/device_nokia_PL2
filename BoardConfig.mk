@@ -14,8 +14,6 @@
 # limitations under the License.
 #
 
-BOARD_VENDOR := nokia
-
 DEVICE_PATH := device/nokia/PL2
 
 # Architecture

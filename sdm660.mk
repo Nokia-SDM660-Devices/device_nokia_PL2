@@ -428,9 +428,6 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/samsung
 
 # Spatial Audio
-PRODUCT_PACKAGES += \
-    libspatialaudio
-
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.dynamic.head_tracker.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.dynamic.head_tracker.xml
 
@@ -457,10 +454,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     telephony-ext
-
-# Trust
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
 
 # Update engine
 PRODUCT_PACKAGES += \
