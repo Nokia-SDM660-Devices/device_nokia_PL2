@@ -396,6 +396,10 @@ PRODUCT_PACKAGES += \
     init.qti.qseecomd.sh \
     wlan_carrier_bin.sh
 
+# Remove packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 # Seccomp
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/seccomp/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy
