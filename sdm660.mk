@@ -19,6 +19,9 @@ DEVICE_PATH := device/nokia/PL2
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/nokia/PL2/PL2-vendor.mk)
 
+# Inherit hardware/nokia 
+$(call inherit-product, hardware/nokia/setup.mk)
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay
@@ -123,9 +126,6 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml
 
-# Audio (Dolby Atmos)
-$(call inherit-product, vendor/motorola-dolby/setup.mk)
-
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0 \
@@ -159,9 +159,6 @@ PRODUCT_PACKAGES += \
     libshim_megvii \
     libgui_shim \
     libgui_shim_vendor
-
-# Camera (Google Camera)
-$(call inherit-product, vendor/GoogleCamera/setup.mk)
 
 # Cgroup and task_profiles
 PRODUCT_COPY_FILES += \
