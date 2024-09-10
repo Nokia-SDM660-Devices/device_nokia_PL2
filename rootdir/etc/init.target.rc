@@ -27,6 +27,7 @@
 #
 #
 
+
 on boot
    # Gestures
    chown system system /proc/AllHWList/tp_fw_ver
@@ -45,10 +46,6 @@ on boot
 on post-fs-data
    # Gestures
    mkdir /data/vendor/misc/touch 0770 system system
-   
-   chmod 0664 /sys/touchpanel/capacitive_keys
-   chmod 0664 /sys/touchpanel/double_tap
-   chmod 0664 /sys/touchpanel/reversed_keys
 
 service vendor.qseecomd /vendor/bin/qseecomd
    class core
