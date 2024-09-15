@@ -156,7 +156,6 @@ BOARD_ROOT_EXTRA_SYMLINKS := \
 SELINUX_IGNORE_NEVERALLOWS := true
 
 # Sepolicy
-include device/lineage/sepolicy/libperfmgr/sepolicy.mk
 include device/qcom/sepolicy-legacy-um/SEPolicy.mk
 
 PRODUCT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
